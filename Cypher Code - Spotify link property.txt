@@ -1,0 +1,750 @@
+
+
+
+CREATE (s:Song { title: 'Candy', artist: 'H.O.T'})
+CREATE (p:Song { title: 'Tell me', artist: 'Jinusean'})
+CREATE (h:Song { title: 'Im your girl', artist: 'S.E.S'})
+CREATE (q:Song { title: 'Couple', artist: 'SECHSKIES'})
+
+
+MATCH (n {title: 'Candy'})
+SET n.link = 'https://open.spotify.com/embed/track/0K25zmumCzn2kFmh9zcLWy'
+RETURN n.title, n.link
+
+<iframe src="https://open.spotify.com/embed/track/0K25zmumCzn2kFmh9zcLWy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+MATCH (n {title: 'Tell me'})
+SET n.link = 'https://open.spotify.com/embed/track/3aQAxjZAl2lhXD1OISjKuQ'
+RETURN n.title, n.link
+
+<iframe src="https://open.spotify.com/embed/track/3aQAxjZAl2lhXD1OISjKuQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+MATCH (o {title: 'Im your girl'})
+SET o.link = 'https://open.spotify.com/embed/track/5I8mg57tDvhGGGC3x14mIZ'
+RETURN o.title, o.link
+
+MATCH (p {title: 'Couple'})
+SET p.link = 'https://open.spotify.com/embed/track/3VuQoOFwJdcQ5IOamXlWZa'
+RETURN p.title, p.link
+
+
+CREATE (s:Song { title: 'Perfect Man', artist: 'Shinhwa'})
+CREATE (p:Song { title: 'No.1', artist: 'BoA'})
+CREATE (h:Song { title: 'Sorry Sorry', artist: 'Super Junior'})
+CREATE (q:Song { title: 'Ring Ding Dong', artist: 'SHINee'})
+CREATE (l:Song { title: 'Gee', artist: 'Girls Generation'})
+
+MATCH (n {title: 'Perfect Man'})
+SET n.link = 'https://open.spotify.com/embed/track/115a4lQhDJGnu4QVSa8bUW'
+RETURN n.title, n.link
+
+MATCH (n {title: 'No.1'})
+SET n.link = 'https://open.spotify.com/embed/track/4RtHEggWfFWknuAsRdkyku'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Sorry Sorry'})
+SET n.link = 'https://open.spotify.com/embed/track/5w18nowVMRZrC5Na9Vxoth'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Ring Ding Dong'})
+SET n.link = 'https://open.spotify.com/embed/track/4vLqN0bIxIQjlet2mIMBnx'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Gee'})
+SET n.link = 'https://open.spotify.com/embed/track/0t7kjpVLgOYITrSfFCoBEA'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'DNA', artist: 'BTS'})
+CREATE (p:Song { title: 'Ko Ko Bop', artist: 'EXO'})
+CREATE (h:Song { title: 'Bad Boy', artist: 'Red Velvet'})
+CREATE (q:Song { title: 'Fancy', artist: 'Twice'})
+CREATE (l:Song { title: 'Gentleman', artist: 'Psy'})
+
+
+
+MATCH (n {title: 'DNA'})
+SET n.link = 'https://open.spotify.com/embed/track/6Z7m5DLNPOaPg9T6nXK0rQ'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Ko Ko Bop'})
+SET n.link = 'https://open.spotify.com/embed/track/5EzitieoPnjyKHAq0gfRMa'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Bad Boy'})
+SET n.link = 'https://open.spotify.com/embed/track/5GKwq4sO5ZHKuWaDmdwMQc'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Fancy'})
+SET n.link = 'https://open.spotify.com/embed/track/2qQpFbqqkLOGySgNK8wBXt'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Gentleman'})
+SET n.link = 'https://open.spotify.com/embed/track/26spalP6x2gUAab8rwB8dQ'
+RETURN n.title, n.link
+
+CREATE (s:Song { title: 'My time', artist: 'Jungkook'})
+CREATE (p:Song { title: 'Bambi', artist: 'Baekhyun'})
+CREATE (h:Song { title: 'Blue Hour', artist: 'TXT'})
+CREATE (q:Song { title: 'Telepathy', artist: 'BTS'})
+CREATE (l:Song { title: 'Not Shy', artist: 'ITZY'})
+
+
+MATCH (n {title: 'My time'})
+SET n.link = 'https://open.spotify.com/embed/track/4vTgx6h4seHvkuFh84JXYP'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Bambi'})
+SET n.link = 'https://open.spotify.com/embed/track/60VaORSJ5x1D4ZPSc0g2En'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Blue Hour'})
+SET n.link = 'https://open.spotify.com/embed/track/3ObPkJQAgjAhTwYvDhPrAW'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Telepathy'})
+SET n.link = 'https://open.spotify.com/embed/track/2FVpOsjT1iquZ3SpCjZ9Ne'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Not Shy'})
+SET n.link = 'https://open.spotify.com/embed/track/4ecVWqbtW6phQGpZMAyqIU'
+RETURN n.title, n.link
+
+CREATE (s:Song { title: 'Remember the Time', artist: 'Michael Jackson'})
+CREATE (p:Song { title: 'Now That I Know', artist: 'Mariah Carey'})
+CREATE (h:Song { title: 'Baby One More Time', artist: 'Britney Spears'})
+CREATE (q:Song { title: 'Wannabe', artist: ' Spice Girls'})
+CREATE (l:Song { title: 'Bye Bye Bye', artist: 'NSync'})
+
+MATCH (n {title: 'Remember the Time'})
+SET n.link = 'https://open.spotify.com/embed/track/4jnFqNWeJCeCRHc4HCdxfd'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Now That I Know'})
+SET n.link = 'https://open.spotify.com/embed/track/4mCUtZpn18sLzYn0hWSSLV'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Baby One More Time'})
+SET n.link = 'https://open.spotify.com/embed/track/3MjUtNVVq3C8Fn0MP3zhXa'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Wannabe'})
+SET n.link = 'https://open.spotify.com/embed/track/1Je1IMUlBXcx1Fz0WE7oPT'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Bye Bye Bye'})
+SET n.link = 'https://open.spotify.com/embed/track/4r8lRYnoOGdEi6YyI5OC1o'
+RETURN n.title, n.link
+
+CREATE (s:Song { title: 'I Kissed a Girl', artist: 'Katy Perry'})
+CREATE (p:Song { title: 'Just Dance', artist: 'Lady Gaga'})
+CREATE (h:Song { title: 'Toxic', artist: 'Britney Spears'})
+CREATE (q:Song { title: 'Hung Up', artist: 'Madonna'})
+CREATE (l:Song { title: 'Rock Your Body', artist: 'Justin Timberlake'})
+
+
+MATCH (n {title: 'I Kissed a Girl'})
+SET n.link = 'https://open.spotify.com/embed/track/14iN3o8ptQ8cFVZTEmyQRV'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Just Dance'})
+SET n.link = 'https://open.spotify.com/embed/track/1dzQoRqT5ucxXVaAhTcT0J'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Toxic'})
+SET n.link = 'https://open.spotify.com/embed/track/6I9VzXrHxO9rA9A5euc8Ak'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Hung Up'})
+SET n.link = 'https://open.spotify.com/embed/track/3850dYVgOFIXJh5U4BFEWH'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Rock Your Body'})
+SET n.link = 'https://open.spotify.com/embed/track/1AWQoqb9bSvzTjaLralEkT'
+RETURN n.title, n.link
+
+
+
+CREATE (s:Song { title: 'Hollaback Gir', artist: 'Gwen Stefani'})
+CREATE (p:Song { title: 'Fuck You', artist: ' Lily Allen'})
+CREATE (h:Song { title: 'Don’t Cha', artist: 'Pussycat Dolls'})
+CREATE (q:Song { title: 'Makes Me Wonde', artist: 'Maroon 5'})
+
+
+MATCH (n {title: 'Hollaback Gir'})
+SET n.link = 'https://open.spotify.com/embed/track/0eqH0ALoDQevq59YcQ53KE'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Fuck You'})
+SET n.link = 'https://open.spotify.com/embed/track/5st5644IlBmKiiRE73UsoZ'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Don’t Cha'})
+SET n.link = 'https://open.spotify.com/embed/track/0BxfFnk0YzONqvmrkO0QrB'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Makes Me Wonde'})
+SET n.link = 'https://open.spotify.com/embed/track/3PNOYDruQplC92lNc7mE9W'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'Runaway Baby', artist: 'Bruno Mars'})
+CREATE (p:Song { title: 'Tattooed Heart', artist: 'Ariana Grande'})
+CREATE (h:Song { title: 'Die Young', artist: 'Ke$ha'})
+CREATE (q:Song { title: 'Heart Attack', artist: ' Demi Lovato'})
+
+
+
+MATCH (n {title: 'Runaway Baby'})
+SET n.link = 'https://open.spotify.com/embed/track/7hCNBVRhHzcsRAv0TQnOzq'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Tattooed Heart'})
+SET n.link = 'https://open.spotify.com/embed/track/7JmIjOsRish3vYBSLTytEC'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Die Young'})
+SET n.link = 'https://open.spotify.com/embed/track/7EQGXaVSyEDsCWKmUcfpLk'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Heart Attack'})
+SET n.link = 'https://open.spotify.com/embed/track/1V6gIisPpYqgFeWbMLI0bA'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Dynamite', artist: 'BTS'})
+CREATE (p:Song { title: 'Rain On Me', artist: 'Lady Gaga'})
+CREATE (h:Song { title: 'Don’t Start Now', artist: 'Dua Lipa'})
+
+MATCH (n {title: 'Dynamite'})
+SET n.link = 'https://open.spotify.com/embed/track/4saklk6nie3yiGePpBwUoc'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Rain On Me'})
+SET n.link = 'https://open.spotify.com/embed/track/24ySl2hOPGCDcxBxFIqWBu'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Don’t Start Now'})
+SET n.link = 'https://open.spotify.com/embed/track/6WrI0LAC5M1Rw2MnX2ZvEg'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Paradisin', artist: 'Rina Sawayama'})
+CREATE (p:Song { title: 'Good 4 U', artist: 'Olivia Rodrigo'})
+CREATE (h:Song { title: 'Kiss Me More', artist: 'Doja Cat'})
+CREATE (q:Song { title: 'Positions', artist: 'Ariana Grande'})
+
+
+MATCH (n {title: 'Paradisin'})
+SET n.link = 'https://open.spotify.com/embed/track/0e1yfIkdDkvhSo2dFYCZIL'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Good 4 U'})
+SET n.link = 'https://open.spotify.com/embed/track/6PERP62TejQjgHu81OHxgM'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Kiss Me More'})
+SET n.link = 'https://open.spotify.com/embed/track/748mdHapucXQri7IAO8yFK'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Positions'})
+SET n.link = 'https://open.spotify.com/embed/track/35mvY5S1H3J2QZyna3TFe0'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Back and Forth' , artist: 'Aaliyah'})
+CREATE (p:Song { title: 'Creep', artist: 'TLC'})
+CREATE (h:Song { title: 'The Boy is Mine', artist: 'Brandy'})
+CREATE (q:Song { title: 'BIlls, Bills, Bills', artist: 'Destiny’s Child'})
+
+MATCH (n {title: 'Back and Forth'})
+SET n.link = 'https://open.spotify.com/embed/track/5FnQzKCwm3WlncWZxtUPs0'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Creep'})
+SET n.link = 'https://open.spotify.com/embed/track/1aWV3uY3SIEZVbmv45oFWS'
+RETURN n.title, n.link
+
+MATCH (n {title: 'The Boy is Mine'})
+SET n.link = 'https://open.spotify.com/embed/track/6sHsXIJoEN5JpdkGMQDJxt'
+RETURN n.title, n.link
+
+MATCH (n {title: 'BIlls, Bills, Bills'})
+SET n.link = 'https://open.spotify.com/embed/track/1Oi2zpmL81Q0yScF1zxaC0'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'Suga Honey Iced Tea' , artist: 'Kelis'})
+CREATE (p:Song { title: 'Lose My Breath', artist: 'Destiny’s Child'})
+CREATE (h:Song { title: 'My Boo', artist: 'Usher'})
+CREATE (q:Song { title: 'Let Me Love You', artist: 'Mario'})
+
+MATCH (n {title: 'Suga Honey Iced Tea'})
+SET n.link = 'https://open.spotify.com/embed/track/7h1kWdBH8pV84RNP2foaf5'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Lose My Breath'})
+SET n.link = 'https://open.spotify.com/embed/track/2n4uOdMHzEvcZ0KP7iQnay'
+RETURN n.title, n.link
+
+MATCH (n {title: 'My Boo'})
+SET n.link = 'https://open.spotify.com/embed/track/68vgtRHr7iZHpzGpon6Jlo'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Let Me Love You'})
+SET n.link = 'https://open.spotify.com/embed/track/3ibKnFDaa3GhpPGlOUj7ff'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Ms. Jackson' , artist: 'Outkast'})
+CREATE (p:Song { title: 'Foolish', artist: 'Ashanti'})
+CREATE (h:Song { title: 'Let Me Blow Ya Mind', artist: 'Eve'})
+CREATE (q:Song { title: 'Kiss Me Thru the Phone', artist: 'Soulja Boy'})
+
+MATCH (n {title: 'Ms. Jackson'})
+SET n.link = 'https://open.spotify.com/embed/track/0I3q5fE6wg7LIfHGngUTnV'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Foolish'})
+SET n.link = 'https://open.spotify.com/embed/track/6zMUIb4uce1CzpbjR3vMdN'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Let Me Blow Ya Mind'})
+SET n.link = 'https://open.spotify.com/embed/track/3RmKpob8xzv1pzHEQrMJah'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Kiss Me Thru the Phone'})
+SET n.link = 'https://open.spotify.com/embed/track/2q4rjDy9WhaN3o9MvDbO21'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'Love Galore' , artist: 'SZA'})
+CREATE (p:Song { title: 'Company', artist: 'Tinashe'})
+CREATE (h:Song { title: 'Consideration', artist: 'Rihanna'})
+CREATE (q:Song { title: 'CRZY', artist: 'Kehlani'})
+
+MATCH (n {title: 'Love Galore'})
+SET n.link = 'https://open.spotify.com/embed/track/0q75NwOoFiARAVp4EXU4Bs'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Company'})
+SET n.link = 'https://open.spotify.com/embed/track/1608cOZINzEjaREvqEaDBd'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Consideration'})
+SET n.link = 'https://open.spotify.com/embed/track/6t90Z9XkdsHD8xMxro6KRP'
+RETURN n.title, n.link
+
+MATCH (n {title: 'CRZY'})
+SET n.link = 'https://open.spotify.com/embed/track/6Dwtha2FtZFoMEBh5GR2sq'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'Pick Up Your Feelings' , artist: 'Jazmine Sullivan'})
+CREATE (p:Song { title: 'Do It', artist: 'Chloe x Halle'})
+CREATE (h:Song { title: Gluttony, artist: 'Shreya'})
+CREATE (q:Song { title: 'Addicted', artist: 'Jorja Smith'})
+
+MATCH (n {title: 'Pick Up Your Feelings'})
+SET n.link = 'https://open.spotify.com/embed/track/2JLVZYEMmqPWbUoAJAMKfm'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Do It'})
+SET n.link = 'https://open.spotify.com/embed/track/35Dh5MnCUPLN3XyAVtQff3'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Gluttony'})
+SET n.link = 'https://open.spotify.com/embed/track/5kzqWA4y2f8ZNqWJPKrqBz'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Addicted'})
+SET n.link = 'https://open.spotify.com/embed/track/778x5bolqJeICcrtSBNrko'
+RETURN n.title, n.link
+
+
+
+
+
+
+CREATE (s:Song { title: 'Good Days' , artist: 'SZA'})
+CREATE (p:Song { title: 'Heartless', artist: 'The Weeknd'})
+CREATE (h:Song { title: 'Dead Man Walking ' , artist: 'Brent Faiyaz'})
+CREATE (q:Song { title: 'Forfeit', artist: 'Kiana Lede'})
+
+MATCH (n {title: 'Good Days'})
+SET n.link = 'https://open.spotify.com/embed/track/3YJJjQPAbDT7mGpX3WtQ9A'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Heartless'})
+SET n.link = 'https://open.spotify.com/embed/track/6bnF93Rx87YqUBLSgjiMU8'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Dead Man Walking '})
+SET n.link = 'https://open.spotify.com/embed/track/5VlTQnZO89Ioku8ssdbqJk'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Forfeit'})
+SET n.link = 'https://open.spotify.com/embed/track/4uMvvCwqs046uxyJiFJTT1'
+RETURN n.title, n.link
+
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Doo Wop' , artist: ' Ms Lauryn Hill'})
+CREATE (p:Song { title: 'Can I Kick It', artist: 'A Tribe Called Quest'})
+CREATE (h:Song { title: 'Gangsta’s Paradise' , artist: 'Coolio'})
+CREATE (q:Song { title: 'California Love', artist: '2PAC'})
+
+MATCH (n {title: 'Doo Wop'})
+SET n.link = 'https://open.spotify.com/embed/track/0uEp9E98JB5awlA084uaIg'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Can I Kick It'})
+SET n.link = 'https://open.spotify.com/embed/track/3Ti0GdlrotgwsAVBBugv0I'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Gangsta’s Paradise'})
+SET n.link = 'https://open.spotify.com/embed/track/7lQWRAjyhTpCWFC0jmclT4'
+RETURN n.title, n.link
+
+MATCH (n {title: 'California Love'})
+SET n.link = 'https://open.spotify.com/embed/track/3ia3dJETSOllPsv3LJkE35'
+RETURN n.title, n.link
+
+
+
+
+CREATE (s:Song { title: 'Hypnotize' , artist: 'The Notorious B.I.G.'})
+CREATE (p:Song { title: 'Ain’t No Fun', artist: 'Snoop Dogg'})
+CREATE (h:Song { title: 'Can’t Knock the Hustle' , artist: 'Jay Z'})
+CREATE (q:Song { title: '2 Of Amerikaz Most Wanted', artist: '2PAC'})
+
+
+MATCH (n {title: 'Hypnotize'})
+SET n.link = 'https://open.spotify.com/embed/track/6Tsu3OsuMz4KEGKbOYd6A0'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Ain’t No Fun'})
+SET n.link = 'https://open.spotify.com/embed/track/3bA5Xfk5JyPGtBh00GX8Gk'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Can’t Knock the Hustle'})
+SET n.link = 'https://open.spotify.com/embed/track/5H4PU7wBIXL259apGjSpOr'
+RETURN n.title, n.link
+
+MATCH (n {title: '2 Of Amerikaz Most Wanted'})
+SET n.link = 'https://open.spotify.com/embed/track/5Iws9ob8FlpMlaIn9IcFZ7'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Hey Ya' , artist: 'Outkast'})
+CREATE (p:Song { title: 'Crank That', artist: 'Soulja Boy'})
+CREATE (h:Song { title: 'Chicken Noodle Soup' , artist: 'Kanye West'})
+CREATE (q:Song { title: 'Paper Planes', artist: 'M.I.A'})
+
+MATCH (n {title: 'Hey Ya'})
+SET n.link = 'https://open.spotify.com/embed/track/2PpruBYCo4H7WOBJ7Q2EwM'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Crank That'})
+SET n.link = 'https://open.spotify.com/embed/track/66TRwr5uJwPt15mfFkzhbi'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Chicken Noodle Soup'})
+SET n.link = 'https://open.spotify.com/embed/track/6PGrYbKY6I0LnKmAseNBO2'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Paper Planes'})
+SET n.link = 'https://open.spotify.com/embed/track/1ixbwbeBi5ufN4noUKmW5a'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Get Ur Freak On' , artist: 'Missy Elliot'})
+CREATE (p:Song { title: 'Candy Shop', artist: '50 Cent'})
+CREATE (h:Song { title: 'Drop It Like It’s Hot' , artist: 'Snoop Dogg'})
+CREATE (q:Song { title: 'Gold Digger', artist: 'Kanye West'})
+
+MATCH (n {title: 'Get Ur Freak On'})
+SET n.link = 'https://open.spotify.com/embed/track/6zsk6uF3MxfIeHPlubKBvR'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Candy Shop'})
+SET n.link = 'https://open.spotify.com/embed/track/5D2mYZuzcgjpchVY1pmTPh'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Drop It Like It’s Hot'})
+SET n.link = 'https://open.spotify.com/embed/track/70ludZZEUJy1aFVkPI0Kpi'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Gold Digger'})
+SET n.link = 'https://open.spotify.com/embed/track/1PS1QMdUqOal0ai3Gt7sDQ'
+RETURN n.title, n.link
+
+
+
+
+
+CREATE (s:Song { title: 'Strange' , artist: 'Agust D'})
+CREATE (p:Song { title: 'Runnin', artist: '21 Savage'})
+CREATE (h:Song { title: 'Twerkulator' , artist: 'City Girls'})
+CREATE (q:Song { title: 'Aim For The Moon ', artist: - 'Pop Smoke'})
+
+MATCH (n {title: 'Strange'})
+SET n.link = 'https://open.spotify.com/embed/track/4KjASaPtCvRJ4YArYpz6je'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Runnin'})
+SET n.link = 'https://open.spotify.com/track/embed/5SWnsxjhdcEDc7LJjq9UHk'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Twerkulator'})
+SET n.link = 'https://open.spotify.com/embed/track/2Ty7EDf9XLYzEUqEIwJfDC'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Aim For The Moon '})
+SET n.link = 'https://open.spotify.com/embed/track/6O7fPYTsb2mY0PiFt2ymDB'
+RETURN n.title, n.link
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Smells Like Teen Spirit' , artist: 'Nirvana'})
+CREATE (p:Song { title: 'Wonderwall', artist: 'Oasis'})
+CREATE (h:Song { title: 'All The Small Things' , artist: 'blink-182'})
+CREATE (q:Song { title: 'Naked in the Rain', artist: - ' Red Chilli Peppers'})
+
+MATCH (n {title: 'Smells Like Teen Spirit'})
+SET n.link = 'https://open.spotify.com/embed/track/1f3yAtsJtY87CTmM8RLnxf'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Wonderwall'})
+SET n.link = 'https://open.spotify.com/embed/track/5qqabIl2vWzo9ApSC317sa'
+RETURN n.title, n.link
+
+MATCH (n {title: 'All The Small Things'})
+SET n.link = 'https://open.spotify.com/embed/track/2m1hi0nfMR9vdGC8UcrnwU'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Naked in the Rain'})
+SET n.link = 'https://open.spotify.com/embed/track/6xid2NOIS1aqviPPe67OqF'
+RETURN n.title, n.link
+
+
+
+
+Creep - Radiohead
+Closer - Nine Inch Nails
+Bulls on Parade - Rage Against The Machine
+Longview - Green Day
+
+MATCH (n {title: 'Creep', artist:'Radiohead'})
+SET n.link = 'https://open.spotify.com/embed/track/70LcF31zb1H0PyJoS1Sx1r'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Closer'})
+SET n.link = 'https://open.spotify.com/embed/track/5mc6EyF1OIEOhAkD0Gg9Lc'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Bulls on Parade'})
+SET n.link = 'https://open.spotify.com/embed/track/0tZ3mElWcr74OOhKEiNz1x'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Longview'})
+SET n.link = 'https://open.spotify.com/embed/track/3LRJbFT9rKoKv4aW7PuBJC'
+RETURN n.title, n.link
+
+
+
+
+Bring Me to Life - Evanescence
+I Bet You Look Good On The Dancefloor - Arctic Monkeys
+Yellow - Coldplay
+Feel Good Inc - Gorillaz
+
+MATCH (n {title: 'Bring Me to Life'})
+SET n.link = 'https://open.spotify.com/embed/track/0COqiPhxzoWICwFCS4eZcp'
+RETURN n.title, n.link
+
+MATCH (n {title: 'I Bet You Look Good On The Dancefloor'})
+SET n.link = 'https://open.spotify.com/embed/track/3DQVgcqaP3iSMbaKsd57l5'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Yellow '})
+SET n.link = 'https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Feel Good Inc'})
+SET n.link = 'https://open.spotify.com/embed/track/0d28khcov6AiegSCpG5TuT'
+RETURN n.title, n.link
+
+
+
+
+
+Sex on Fire - Kings of Leon
+St. Anger - Metallica
+Dumpweed - blink-182
+Spit It Out - Slipknot
+
+MATCH (n {title: 'Sex on Fire'})
+SET n.link = 'https://open.spotify.com/embed/track/0ntQJM78wzOLVeCUAW7Y45'
+RETURN n.title, n.link
+
+MATCH (n {title: 'St. Anger'})
+SET n.link = 'https://open.spotify.com/embed/track/5JAnXx5BBES4FEf4d4t4CC'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Dumpweed'})
+SET n.link = 'https://open.spotify.com/embed/track/5SlKhaPcdIfSjpoM2QtM4C'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Spit It Out'})
+SET n.link = 'https://open.spotify.com/embed/track/2W2eaLVKv9NObcLXlYRZZo'
+RETURN n.title, n.link
+
+
+
+
+
+
+The Drugs - Mother Mother
+Dead Inside - Muse
+Tokyo Rendez-Vous - King Gnu
+Anklebiters - Paramore
+
+MATCH (n {title: 'The Drugs'})
+SET n.link = 'https://open.spotify.com/embed/track/4ZVXIvpsUZgTZkagvUjykx'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Dead Inside'})
+SET n.link = 'https://open.spotify.com/embed/track/2JqyquFrqaoKt0SRr91meT'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Tokyo Rendez-Vous'})
+SET n.link = 'https://open.spotify.com/embed/track/6in5HPPTBwqPmDIezhQOpj'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Anklebiters'})
+SET n.link = 'https://open.spotify.com/embed/track/3hgzEGrm5iTY6pkgJ827qX'
+RETURN n.title, n.link
+
+
+
+
+Planetary (GO!) - My Chemical Romance
+King For a Day - Pierce The Veil
+Na Na Na - My Chemical Romance
+Afraid - The Neighbourhood
+
+MATCH (n {title: 'Planetary (GO!)'})
+SET n.link = 'https://open.spotify.com/embed/track/3iitOoZUtWEgwZOEYFITFo'
+RETURN n.title, n.link
+
+MATCH (n {title: 'King For a Day'})
+SET n.link = 'https://open.spotify.com/embed/track/1IT0WQk5J8NsaeII8ktdlZ'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Na Na Na '})
+SET n.link = 'https://open.spotify.com/embed/track/5BB0Jzw60KyfSTyjJqtely'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Afraid'})
+SET n.link = 'https://open.spotify.com/embed/track/7brQHA2CgQpcMBiOlfiXYb'
+RETURN n.title, n.link
+
+
+
+
+Night Crawling - Miley Cyrus
+Leave Me Alone - I DONT KNOW HOW BUT THEY FOUND ME
+Flames - MOD SUN
+Lemonade - YUNGBLUD
+Forgotten Souls - Mother Mother
+
+MATCH (n {title: 'Night Crawling'})
+SET n.link = 'https://open.spotify.com/embed/track/4U34WsyOvppOMnRfq7DuOy'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Flames'})
+SET n.link = 'https://open.spotify.com/embed/track/6z7mOTf4O20AApGsTNn7fC'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Lemonade'})
+SET n.link = 'https://open.spotify.com/embed/track/4k9it7Buh3IXU7o3oLRjJL'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Forgotten Souls'})
+SET n.link = 'https://open.spotify.com/embed/track/2HXlntIqqIgu4ibdVYk4I3'
+RETURN n.title, n.link
+
+
+
+
+t r a n s p a r e n t s o u l - WILLOW
+Impossible - Nothing But Thieves
+Kingslayer - Bring Me The Horizon
+WTF Do I Know - Miley Cyrus
+
+
+MATCH (n {title: 't r a n s p a r e n t s o u l'})
+SET n.link = 'https://open.spotify.com/embed/track/1QL7nSDZCwZMnbisV4KOXt'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Impossible'})
+SET n.link = 'https://open.spotify.com/embed/track/4ZEvO7TZQTbUGJzqjcPFDD'
+RETURN n.title, n.link
+
+MATCH (n {title: 'Kingslayer'})
+SET n.link = 'https://open.spotify.com/embed/track/7CAbF0By0Fpnbiu6Xn5ZF7'
+RETURN n.title, n.link
+
+MATCH (n {title: 'WTF Do I Know'})
+SET n.link = 'https://open.spotify.com/embed/track/37PJvlIfYWqEX6fgjHlnTf'
+RETURN n.title, n.link
+
+
+
+
+
+
+
+
+
+
+
+

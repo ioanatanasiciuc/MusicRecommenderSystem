@@ -1,0 +1,942 @@
+CREATE (g:Genre {name : 'K-POP'})
+CREATE (m:Genre {name : 'ROCK'})
+CREATE (p:Genre {name : 'HIP-HOP'})
+CREATE (q:Genre {name : 'LATIN'})
+CREATE (r:Genre {name : 'R&B'})
+
+
+CREATE (g:Decade {decade : '1990'})
+CREATE (m:Decade {decade : '2000'})
+CREATE (p:Decade {decade : '2010'})
+
+
+
+CREATE (s:Song { title: 'Candy', artist: 'H.O.T'})
+CREATE (p:Song { title: 'Tell me', artist: 'Jinusean'})
+CREATE (h:Song { title: 'Im your girl', artist: 'S.E.S'})
+CREATE (q:Song { title: 'Couple', artist: 'SECHSKIES'})
+
+
+
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE (s.title = 'Candy' OR s.title = 'Im your girl') AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE (s.title = 'Tell me' OR s.title = 'Couple') AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+CREATE (s:Song { title: 'Perfect Man', artist: 'Shinhwa'})
+CREATE (p:Song { title: 'No.1', artist: 'BoA'})
+CREATE (h:Song { title: 'Sorry Sorry', artist: 'Super Junior'})
+CREATE (q:Song { title: 'Ring Ding Dong', artist: 'SHINee'})
+CREATE (l:Song { title: 'Gee', artist: 'Girls Generation'})
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Perfect Man' OR s.title = 'No.1' OR s.title = 'Sorry Sorry' OR s.title = 'Ring Ding Dong' OR s.title = 'Gee' )AND g.name = 'K-POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title = 'Perfect Man' OR s.title = 'No.1' OR s.title = 'Sorry Sorry' OR s.title = 'Ring Ding Dong' OR s.title = 'Gee' )
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title = 'Perfect Man' OR s.title = 'No.1' OR s.title = 'Sorry Sorry' OR s.title = 'Ring Ding Dong' OR s.title = 'Gee' )AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+CREATE (s:Song { title: 'DNA', artist: 'BTS'})
+CREATE (p:Song { title: 'Ko Ko Bop', artist: 'EXO'})
+CREATE (h:Song { title: 'Bad Boy', artist: 'Red Velvet'})
+CREATE (q:Song { title: 'Fancy', artist: 'Twice'})
+CREATE (l:Song { title: 'Gentleman', artist: 'Psy'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'DNA' OR s.title = 'Ko Ko Bop' OR s.title = 'Bad Boy' OR s.title = 'Fancy' OR s.title = 'Gentleman' )AND g.name = 'K-POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title = 'DNA' OR s.title = 'Ko Ko Bop' OR s.title = 'Bad Boy' OR s.title = 'Fancy' OR s.title = 'Gentleman' )
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title = 'DNA' OR s.title = 'Ko Ko Bop' OR s.title = 'Bad Boy' OR s.title = 'Fancy' OR s.title = 'Gentleman'  )AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+CREATE (s:Song { title: 'My time', artist: 'Jungkook'})
+CREATE (p:Song { title: 'Bambi', artist: 'Baekhyun'})
+CREATE (h:Song { title: 'Blue Hour', artist: 'TXT'})
+CREATE (q:Song { title: 'Telepathy', artist: 'BTS'})
+CREATE (l:Song { title: 'Not Shy', artist: 'ITZY'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'My time' OR s.title = 'Bambi' OR s.title = 'Blue Hour' OR s.title = 'Telepathy' OR s.title = 'Not Shy' )AND g.name = 'K-POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE (s.title = 'My time' OR s.title = 'Bambi' OR s.title = 'Blue Hour' OR s.title = 'Telepathy' OR s.title = 'Not Shy')
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE (s.title = 'My time' OR s.title = 'Bambi' OR s.title = 'Blue Hour' OR s.title = 'Telepathy' OR s.title = 'Not Shy'  )AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+CREATE (s:Song { title: 'Remember the Time', artist: 'Michael Jackson'})
+CREATE (p:Song { title: 'Now That I Know', artist: 'Mariah Carey'})
+CREATE (h:Song { title: 'Baby One More Time', artist: 'Britney Spears'})
+CREATE (q:Song { title: 'Wannabe', artist: ' Spice Girls'})
+CREATE (l:Song { title: 'Bye Bye Bye', artist: 'NSync'})
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Remember the Time' OR s.title = 'Now That I Know' OR s.title = 'Baby One More Time' OR s.title = 'Wannabe' OR s.title = 'Bye Bye Bye' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE (s.title = 'Remember the Time' OR s.title = 'Now That I Know' OR s.title = 'Baby One More Time' OR s.title = 'Wannabe' OR s.title = 'Bye Bye Bye' )AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE(s.title = 'Remember the Time' OR s.title = 'Now That I Know' OR s.title = 'Baby One More Time' OR s.title = 'Wannabe' OR s.title = 'Bye Bye Bye' ) AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'I Kissed a Girl', artist: 'Katy Perry'})
+CREATE (p:Song { title: 'Just Dance', artist: 'Lady Gaga'})
+CREATE (h:Song { title: 'Toxic', artist: 'Britney Spears'})
+CREATE (q:Song { title: 'Hung Up', artist: 'Madonna'})
+CREATE (l:Song { title: 'Rock Your Body', artist: 'Justin Timberlake'})
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'I Kissed a Girl' OR s.title ='Just Dance' OR s.title = 'Toxic' OR s.title = 'Hung Up' OR s.title = 'Rock Your Body' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title = 'I Kissed a Girl' OR s.title ='Just Dance' OR s.title = 'Toxic' OR s.title = 'Hung Up' OR s.title = 'Rock Your Body' ) AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title = 'I Kissed a Girl' OR s.title ='Just Dance' OR s.title = 'Toxic' OR s.title = 'Hung Up' OR s.title = 'Rock Your Body' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+CREATE (s:Song { title: 'Hollaback Gir', artist: 'Gwen Stefani'})
+CREATE (p:Song { title: 'Fuck You', artist: ' Lily Allen'})
+CREATE (h:Song { title: 'Don’t Cha', artist: 'Pussycat Dolls'})
+CREATE (q:Song { title: 'Makes Me Wonde', artist: 'Maroon 5'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Hollaback Girl' OR s.title ='Fuck You' OR s.title = 'Makes Me Wonde' OR s.title = 'Don’t Cha' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title = 'Hollaback Girl' OR s.title ='Fuck You' OR s.title = 'Makes Me Wonde' OR s.title = 'Don’t Cha' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title = 'Hollaback Girl' OR s.title ='Fuck You' OR s.title = 'Makes Me Wonde' OR s.title = 'Don’t Cha' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Runaway Baby', artist: 'Bruno Mars'})
+CREATE (p:Song { title: 'Tattooed Heart', artist: 'Ariana Grande'})
+CREATE (h:Song { title: 'Die Young', artist: 'Ke$ha'})
+CREATE (q:Song { title: 'Heart Attack', artist: ' Demi Lovato'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Runaway Baby' OR s.title ='Tattooed Heart' OR s.title = 'Die Young' OR s.title = 'Heart Attack' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title = 'Runaway Baby' OR s.title ='Tattooed Heart' OR s.title = 'Die Young' OR s.title = 'Heart Attack' ) AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title = 'Runaway Baby' OR s.title ='Tattooed Heart' OR s.title = 'Die Young' OR s.title = 'Heart Attack' ) AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Dynamite', artist: 'BTS'})
+CREATE (p:Song { title: 'Rain On Me', artist: 'Lady Gaga'})
+CREATE (h:Song { title: 'Don’t Start Now', artist: 'Dua Lipa'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Dynamite' OR s.title ='Rain On Me' OR s.title = 'Don’t Start Now' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title = 'Dynamite' OR s.title ='Rain On Me' OR s.title = 'Don’t Start Now' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title = 'Dynamite' OR s.title ='Rain On Me' OR s.title = 'Don’t Start Now' ) AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'Paradisin', artist: 'Rina Sawayama'})
+CREATE (p:Song { title: 'Good 4 U', artist: 'Olivia Rodrigo'})
+CREATE (h:Song { title: 'Kiss Me More', artist: 'Doja Cat'})
+CREATE (q:Song { title: 'Positions', artist: 'Ariana Grande'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title = 'Paradisin' OR s.title ='Good 4 U' OR s.title = 'Kiss Me More' OR s.title = 'Positions' )AND g.name = 'POP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title = 'Paradisin' OR s.title ='Good 4 U' OR s.title = 'Kiss Me More' OR s.title = 'Positions' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title = 'Paradisin' OR s.title ='Good 4 U' OR s.title = 'Kiss Me More' OR s.title = 'Positions' ) AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Back and Forth' , artist: 'Aaliyah'})
+CREATE (p:Song { title: 'Creep', artist: 'TLC'})
+CREATE (h:Song { title: 'The Boy is Mine', artist: 'Brandy'})
+CREATE (q:Song { title: 'BIlls, Bills, Bills', artist: 'Destiny’s Child'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Back and Forth' OR s.title ='Creep' OR s.title = 'The Boy is Mine' OR s.title = 'BIlls, Bills, Bills' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE   ( s.title ='Back and Forth' OR s.title ='Creep' OR s.title = 'The Boy is Mine' OR s.title = 'BIlls, Bills, Bills' ) AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE   ( s.title ='Back and Forth' OR s.title ='Creep' OR s.title = 'The Boy is Mine' OR s.title = 'BIlls, Bills, Bills' ) AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Suga Honey Iced Tea' , artist: 'Kelis'})
+CREATE (p:Song { title: 'Lose My Breath', artist: 'Destiny’s Child'})
+CREATE (h:Song { title: 'My Boo', artist: 'Usher'})
+CREATE (q:Song { title: 'Let Me Love You', artist: 'Mario'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Suga Honey Iced Tea' OR s.title ='Lose My Breath' OR s.title = 'My Boo' OR s.title = 'Let Me Love You' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE   ( s.title ='Suga Honey Iced Tea' OR s.title ='Lose My Breath' OR s.title = 'My Boo' OR s.title = 'Let Me Love You' )AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Suga Honey Iced Tea' OR s.title ='Lose My Breath' OR s.title = 'My Boo' OR s.title = 'Let Me Love You' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'Ms. Jackson' , artist: 'Outkast'})
+CREATE (p:Song { title: 'Foolish', artist: 'Ashanti'})
+CREATE (h:Song { title: 'Let Me Blow Ya Mind', artist: 'Eve'})
+CREATE (q:Song { title: 'Kiss Me Thru the Phone', artist: 'Soulja Boy'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Ms. Jackson' OR s.title ='Foolish' OR s.title = 'Let Me Blow Ya Mind' OR s.title = 'Kiss Me Thru the Phone' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title ='Ms. Jackson' OR s.title ='Foolish' OR s.title = 'Let Me Blow Ya Mind' OR s.title = 'Kiss Me Thru the Phone' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Ms. Jackson' OR s.title ='Foolish' OR s.title = 'Let Me Blow Ya Mind' OR s.title = 'Kiss Me Thru the Phone' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+CREATE (s:Song { title: 'Love Galore' , artist: 'SZA'})
+CREATE (p:Song { title: 'Company', artist: 'Tinashe'})
+CREATE (h:Song { title: 'Consideration', artist: 'Rihanna'})
+CREATE (q:Song { title: 'CRZY', artist: 'Kehlani'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Love Galore' OR s.title ='Company' OR s.title = 'Consideration' OR s.title = 'CRZY' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title ='Love Galore' OR s.title ='Company' OR s.title = 'Consideration' OR s.title = 'CRZY' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Love Galore' OR s.title ='Company' OR s.title = 'Consideration' OR s.title = 'CRZY' ) AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+CREATE (s:Song { title: 'Pick Up Your Feelings' , artist: 'Jazmine Sullivan'})
+CREATE (p:Song { title: 'Do It', artist: 'Chloe x Halle'})
+CREATE (h:Song { title: Gluttony, artist: 'Shreya'})
+CREATE (q:Song { title: 'Addicted', artist: 'Jorja Smith'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Pick Up Your Feelings' OR s.title ='Do It' OR s.title = 'Gluttony' OR s.title = 'Addicted' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title ='Pick Up Your Feelings' OR s.title ='Do It' OR s.title = 'Gluttony' OR s.title = 'Addicted' ) AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Pick Up Your Feelings' OR s.title ='Do It' OR s.title = 'Gluttony' OR s.title = 'Addicted' ) AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'Good Days' , artist: 'SZA'})
+CREATE (p:Song { title: 'Heartless', artist: 'The Weeknd'})
+CREATE (h:Song { title: 'Dead Man Walking ' , artist: 'Brent Faiyaz'})
+CREATE (q:Song { title: 'Forfeit', artist: 'Kiana Lede'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Good Days' OR s.title ='Heartless' OR s.title = 'Dead Man Walking ' OR s.title = 'Forfeit' ) AND g.name = 'R&B'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE  ( s.title ='Good Days' OR s.title ='Heartless' OR s.title = 'Dead Man Walking ' OR s.title = 'Forfeit' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Good Days' OR s.title ='Heartless' OR s.title = 'Dead Man Walking ' OR s.title = 'Forfeit' ) AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'Doo Wop' , artist: ' Ms Lauryn Hill'})
+CREATE (p:Song { title: 'Can I Kick It', artist: 'A Tribe Called Quest'})
+CREATE (h:Song { title: 'Gangsta’s Paradise' , artist: 'Coolio'})
+CREATE (q:Song { title: 'California Love', artist: '2PAC'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Doo Wop' OR s.title ='Can I Kick It' OR s.title = 'Gangsta’s Paradise' OR s.title = 'California Love' ) AND g.name = 'HIP-HOP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title ='Doo Wop' OR s.title ='Can I Kick It' OR s.title = 'Gangsta’s Paradise' OR s.title = 'California Love' )  AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Doo Wop' OR s.title ='Can I Kick It' OR s.title = 'Gangsta’s Paradise' OR s.title = 'California Love' )  AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Hypnotize' , artist: 'The Notorious B.I.G.'})
+CREATE (p:Song { title: 'Ain’t No Fun', artist: 'Snoop Dogg'})
+CREATE (h:Song { title: 'Can’t Knock the Hustle' , artist: 'Jay Z'})
+CREATE (q:Song { title: '2 Of Amerikaz Most Wanted', artist: '2PAC'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Hypnotize' OR s.title ='Ain’t No Fun' OR s.title = 'Can’t Knock the Hustle' OR s.title = '2 Of Amerikaz Most Wanted' ) AND g.name = 'HIP-HOP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title ='Hypnotize' OR s.title ='Ain’t No Fun' OR s.title = 'Can’t Knock the Hustle' OR s.title = '2 Of Amerikaz Most Wanted' )  AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Hypnotize' OR s.title ='Ain’t No Fun' OR s.title = 'Can’t Knock the Hustle' OR s.title = '2 Of Amerikaz Most Wanted' )  AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Hey Ya' , artist: 'Outkast'})
+CREATE (p:Song { title: 'Crank That', artist: 'Soulja Boy'})
+CREATE (h:Song { title: 'Chicken Noodle Soup' , artist: 'Kanye West'})
+CREATE (q:Song { title: 'Paper Planes', artist: 'M.I.A'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Hey Ya' OR s.title ='Crank That' OR s.title = 'Chicken Noodle Soup' OR s.title = 'Paper Planes' ) AND g.name = 'HIP-HOP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Hey Ya' OR s.title ='Crank That' OR s.title = 'Chicken Noodle Soup' OR s.title = 'Paper Planes' )  AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Hey Ya' OR s.title ='Crank That' OR s.title = 'Chicken Noodle Soup' OR s.title = 'Paper Planes' )  AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 'Get Ur Freak On' , artist: 'Missy Elliot'})
+CREATE (p:Song { title: 'Candy Shop', artist: '50 Cent'})
+CREATE (h:Song { title: 'Drop It Like It’s Hot' , artist: 'Snoop Dogg'})
+CREATE (q:Song { title: 'Gold Digger', artist: 'Kanye West'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Get Ur Freak On' OR s.title ='Candy Shop' OR s.title = 'Drop It Like It’s Hot' OR s.title = 'Gold Digger' ) AND g.name = 'HIP-HOP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title ='Get Ur Freak On' OR s.title ='Candy Shop' OR s.title = 'Drop It Like It’s Hot' OR s.title = 'Gold Digger' )  AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='Get Ur Freak On' OR s.title ='Candy Shop' OR s.title = 'Drop It Like It’s Hot' OR s.title = 'Gold Digger' )  AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Strange' , artist: 'Agust D'})
+CREATE (p:Song { title: 'Runnin', artist: '21 Savage'})
+CREATE (h:Song { title: 'Twerkulator' , artist: 'City Girls'})
+CREATE (q:Song { title: 'Aim For The Moon ', artist: - 'Pop Smoke'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Strange' OR s.title ='Runnin' OR s.title = 'Twerkulator' OR s.title = 'Aim For The Moon ' ) AND g.name = 'HIP-HOP'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Strange' OR s.title ='Runnin' OR s.title = 'Twerkulator' OR s.title = 'Aim For The Moon ' )   AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Strange' OR s.title ='Runnin' OR s.title = 'Twerkulator' OR s.title = 'Aim For The Moon ' )   AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+CREATE (s:Song { title: 'Smells Like Teen Spirit' , artist: 'Nirvana'})
+CREATE (p:Song { title: 'Wonderwall', artist: 'Oasis'})
+CREATE (h:Song { title: 'All The Small Things' , artist: 'blink-182'})
+CREATE (q:Song { title: 'Naked in the Rain', artist: - ' Red Chilli Peppers'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Smells Like Teen Spirit' OR s.title ='Wonderwall' OR s.title = 'All The Small Things' OR s.title = 'Naked in the Rain' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Smells Like Teen Spirit' OR s.title ='Wonderwall' OR s.title = 'All The Small Things' OR s.title = 'Naked in the Rain' )   AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Smells Like Teen Spirit' OR s.title ='Wonderwall' OR s.title = 'All The Small Things' OR s.title = 'Naked in the Rain' )   AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+CREATE (s:Song { title: 'Creep' , artist: 'Radiohead'})
+CREATE (p:Song { title: 'Closer', artist: 'Nine Inch Nails'})
+CREATE (h:Song { title: 'Bulls on Parade' , artist: 'Rage Against The Machine'})
+CREATE (q:Song { title: 'Longview', artist: ' Green Day'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Creep' OR s.title ='Closer' OR s.title = 'Bulls on Parade' OR s.title = 'Longview' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Creep' OR s.title ='Closer' OR s.title = 'Bulls on Parade' OR s.title = 'Longview' )  AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Creep' OR s.title ='Closer' OR s.title = 'Bulls on Parade' OR s.title = 'Longview' )  AND g.decade = '1990'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+
+CREATE (s:Song { title: 'Bring Me to Life' , artist: 'Evanescence'})
+CREATE (p:Song { title: 'I Bet You Look Good On The Dancefloor', artist: 'Arctic Monkeys'})
+CREATE (h:Song { title: 'Yellow ' , artist: 'Coldplay'})
+CREATE (q:Song { title: 'Feel Good Inc', artist: 'Gorillaz'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Bring Me to Life' OR s.title ='I Bet You Look Good On The Dancefloor' OR s.title = 'Yellow ' OR s.title = 'Feel Good Inc' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Bring Me to Life' OR s.title ='I Bet You Look Good On The Dancefloor' OR s.title = 'Yellow ' OR s.title = 'Feel Good Inc' )  AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Bring Me to Life' OR s.title ='I Bet You Look Good On The Dancefloor' OR s.title = 'Yellow ' OR s.title = 'Feel Good Inc' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+CREATE (s:Song { title: 'Sex on Fire' , artist: 'Kings of Leon'})
+CREATE (p:Song { title: 'St. Anger', artist: ' Metallica'})
+CREATE (h:Song { title: 'Dumpweed' , artist: 'blink-182'})
+CREATE (q:Song { title: 'Spit It Out', artist: 'Slipknot'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Sex on Fire' OR s.title ='St. Anger' OR s.title = 'Dumpweed' OR s.title = 'Spit It Out' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Sex on Fire' OR s.title ='St. Anger' OR s.title = 'Dumpweed' OR s.title = 'Spit It Out' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Sex on Fire' OR s.title ='St. Anger' OR s.title = 'Dumpweed' OR s.title = 'Spit It Out' ) AND g.decade = '2000'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+CREATE (s:Song { title: 'The Drugs' , artist: 'Mother Mother'})
+CREATE (p:Song { title: 'Dead Inside ', artist: 'Muse'})
+CREATE (h:Song { title: 'Tokyo Rendez-Vous' , artist: 'King Gnu'})
+CREATE (q:Song { title: 'Anklebiters', artist: 'Paramore'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='The Drugs' OR s.title ='Dead Inside ' OR s.title = 'Tokyo Rendez-Vous' OR s.title = 'Anklebiters' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='The Drugs' OR s.title ='Dead Inside ' OR s.title = 'Tokyo Rendez-Vous' OR s.title = 'Anklebiters' )  AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='The Drugs' OR s.title ='Dead Inside ' OR s.title = 'Tokyo Rendez-Vous' OR s.title = 'Anklebiters' )  AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+CREATE (s:Song { title: 'Planetary (GO!)' , artist: 'My Chemical Romance'})
+CREATE (p:Song { title: 'King For a Day ', artist: 'Pierce The Veil'})
+CREATE (h:Song { title: 'Na Na Na ' , artist: 'My Chemical Romance'})
+CREATE (q:Song { title: 'Afraid', artist: 'The Neighbourhood'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Planetary (GO!)' OR s.title ='King For a Day ' OR s.title = 'Na Na Na ' OR s.title = 'Afraid' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Planetary (GO!)' OR s.title ='King For a Day ' OR s.title = 'Na Na Na ' OR s.title = 'Afraid' )   AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Planetary (GO!)' OR s.title ='King For a Day ' OR s.title = 'Na Na Na ' OR s.title = 'Afraid' )   AND g.decade = '2010'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+CREATE (s:Song { title: 'Night Crawling' , artist: 'Miley Cyrus'})
+CREATE (p:Song { title: 'Flames', artist: 'MOD SUN'})
+CREATE (h:Song { title: 'Lemonade' , artist: 'YUNGBLUD'})
+CREATE (q:Song { title: 'Forgotten Souls', artist: 'Mother Mother'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='Night Crawling' OR s.title ='Flames' OR s.title = 'Lemonade' OR s.title = 'Forgotten Souls' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE( s.title ='Night Crawling' OR s.title ='Flames' OR s.title = 'Lemonade' OR s.title = 'Forgotten Souls' )  AND g.explicit = 'NO'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE ( s.title ='Night Crawling' OR s.title ='Flames' OR s.title = 'Lemonade' OR s.title = 'Forgotten Souls' )  AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
+
+
+
+
+CREATE (s:Song { title: 't r a n s p a r e n t s o u l' , artist: 'WILLOW'})
+CREATE (p:Song { title: 'Impossible', artist: 'Nothing But Thieves'})
+CREATE (h:Song { title: 'Kingslayer' , artist: ' Bring Me The Horizon'})
+CREATE (q:Song { title: 'WTF Do I Know', artist: 'Miley Cyrus'})
+
+
+MATCH
+  (s:Song),
+  (g:Genre)
+WHERE ( s.title ='t r a n s p a r e n t s o u l' OR s.title ='Impossible' OR s.title = 'Kingslayer' OR s.title = 'WTF Do I Know' ) AND g.name = 'ROCK'
+CREATE (s)-[r:HAS_GENRE]->(g)
+RETURN type(r)
+
+MATCH
+  (s:Song),
+  (g:Explicit)
+WHERE ( s.title ='t r a n s p a r e n t s o u l' OR s.title ='Impossible' OR s.title = 'Kingslayer' OR s.title = 'WTF Do I Know' ) AND g.explicit = 'YES'
+CREATE (s)-[r:IS_EXPLICIT]->(g)
+RETURN type(r)
+
+
+MATCH
+  (s:Song),
+  (g:Decade)
+WHERE  ( s.title ='t r a n s p a r e n t s o u l' OR s.title ='Impossible' OR s.title = 'Kingslayer' OR s.title = 'WTF Do I Know' ) AND g.decade = '2020'
+CREATE (s)-[r:WAS_RELEASED_IN]->(g)
+RETURN type(r)
+
+
